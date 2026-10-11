@@ -1,18 +1,18 @@
-# 🔐 Détection et analyse d'une compromission sur un serveur Linux
+# Détection et analyse d'une compromission sur un serveur Linux
 
 Mini-projet du module **Administration Sécurisée et Forensics (ASF)**
 ENSA Béni Mellal, filière Intelligence Artificielle et Cybersécurité, 2025-2026
 Encadrant : Pr. TOUIL | Étudiante : LATOUTI Hassnae
 
-> ⚠️ **Avertissement** : ce projet a été réalisé dans un laboratoire isolé (réseau Host-only, machines virtuelles personnelles) à des fins pédagogiques. Les techniques présentées ne doivent jamais être utilisées sur des systèmes sans autorisation explicite.
+> **Avertissement** : ce projet a été réalisé dans un laboratoire isolé (réseau Host-only, machines virtuelles personnelles) à des fins pédagogiques. Les techniques présentées ne doivent jamais être utilisées sur des systèmes sans autorisation explicite.
 
 ---
 
-## 📌 Présentation
+## Présentation
 
 Durcissement d'un serveur Ubuntu, simulation d'une attaque SSH par force brute depuis Kali Linux (Hydra), puis analyse forensique des logs (IOC, chronologie) et réponse à incident.
 
-## 🧪 Environnement
+## Environnement
 
 | Machine | Système | IP | Rôle |
 |---|---|---|---|
@@ -22,7 +22,7 @@ Durcissement d'un serveur Ubuntu, simulation d'une attaque SSH par force brute d
 Réseau : VMnet1 (Host-only)
 Outils : `auditd`, `rsyslog`, `ufw`, `chrony`, `fail2ban`, `Hydra`, `netcat`
 
-## 🗂️ Structure du dépôt
+## Structure du dépôt
 
 ```
 .
@@ -39,7 +39,7 @@ Outils : `auditd`, `rsyslog`, `ufw`, `chrony`, `fail2ban`, `Hydra`, `netcat`
 └── screenshots/                     # Captures d'écran (optionnel)
 ```
 
-## 🛠️ Étapes réalisées
+## Étapes réalisées
 
 ### 1. Modèle de menace
 Actifs critiques, surface d'attaque (SSH, comptes, services), scénario : **bruteforce SSH + élévation de privilèges**.
@@ -84,7 +84,7 @@ sudo aureport -au
 - Vérification des crons (`crontab -l`)
 - Déploiement de Fail2Ban (`maxretry=3`, `bantime=3600`)
 
-## 🚩 Indicateurs de compromission (IOC)
+##  Indicateurs de compromission (IOC)
 
 | Type | Valeur |
 |---|---|
@@ -95,7 +95,7 @@ sudo aureport -au
 | Connexion sortante | 192.168.56.20:8080 |
 | Fichier sensible lu | `/etc/shadow` |
 
-## ✅ Recommandations
+##  Recommandations
 
 1. Mots de passe forts (`libpam-pwquality`, 12 caractères minimum)
 2. `PasswordAuthentication no` (clés SSH uniquement)
@@ -106,10 +106,10 @@ sudo aureport -au
 7. Segmentation réseau et bastion SSH
 8. Surveillance du trafic sortant (reverse shell, exfiltration)
 
-## 📄 Rapport complet
+## Rapport complet
 
-👉 [`docs/rapport_ASF_v5_Hassnae.pdf`](docs/rapport_ASF_v5_Hassnae.pdf)
+ [`docs/rapport_ASF_v5_Hassnae.pdf`](docs/rapport_ASF_v5_Hassnae.pdf)
 
-## 👩‍💻 Auteure
+## Auteure
 
 **LATOUTI Hassnae**, élève ingénieure IA & Cybersécurité, ENSA Béni Mellal
