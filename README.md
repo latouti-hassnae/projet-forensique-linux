@@ -27,16 +27,8 @@ Outils : `auditd`, `rsyslog`, `ufw`, `chrony`, `fail2ban`, `Hydra`, `netcat`
 ```
 .
 ├── README.md
-├── docs/
-│   ├── Mini-Projet_ASF.pdf          # Énoncé
-│   └── rapport_ASF_v5_Hassnae.pdf   # Rapport forensique
-├── configs/
-│   ├── sshd_config.hardened
-│   ├── mini_projet.rules            # Règles auditd
-│   └── jail.local                   # Fail2Ban
-├── scripts/
-│   └── analyse_logs.sh              # Commandes d'analyse (grep, ausearch, aureport)
-└── screenshots/                     # Captures d'écran (optionnel)
+├── Mini-Projet_ASF.pdf          # Énoncé
+└── rapport_ASF_v5_Hassnae.pdf   # Rapport forensique
 ```
 
 ## Étapes réalisées
